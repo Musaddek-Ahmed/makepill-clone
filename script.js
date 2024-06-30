@@ -90,9 +90,7 @@
     
 
     sectionFour.addEventListener('mouseenter', () => {
-        gsap.to(cursor, {
-            background: '#0f0f0f',
-        });
+        cursor.style.background = '#0f0f0f';
     });
 
     gsap.to(sectionFour, {
@@ -128,6 +126,51 @@
                 scrub: 0.1,
             },
 
+        });
+    });
+
+    let parentEl = document.querySelector('.bg');
+    let childEl = document.querySelectorAll('.first-project .first');
+
+    childEl.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+            let ids = item.getAttribute('data-id');
+            let bgEl = document.querySelector(`.id-${ids}`);
+
+            parentEl.querySelectorAll('video').forEach((video) => {
+                video.style.display = 'none';
+            });
+
+            bgEl.style.display = 'block';
+
+            gsap.to(cursor, {
+                height: '120px',
+                width: '120px',
+                duration: 0.4,
+                innerHTML: '<P>See Projects</P>',
+                fontSize: '15px',
+                fontWeight: 'bold',
+                margin: '20px'
+            });
+        });
+
+        item.addEventListener('mouseleave', () => {
+            let ids = item.getAttribute('data-id');
+            let bgEl = document.querySelector(`.id-${ids}`);
+
+            parentEl.querySelectorAll('video').forEach((video) => {
+                video.style.display = 'none';
+            });
+
+            bgEl.style.display = 'none';
+
+            gsap.to(cursor, {
+                height: '18px',
+                width: '18px',
+                duration: '0.1',
+                innerHTML: '',
+                margin: 0,
+            });
         });
     });
  }
