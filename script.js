@@ -43,6 +43,7 @@
             innerHTML: "<i class='fa-solid fa-volume-high'></i>",
             fontSize: '25px',
             color: 'black',
+            background:'white',
             
         });
 
@@ -68,3 +69,66 @@
     
  }
  section2();
+
+ function section3(){
+    let sectionThree = document.querySelector('.section3');
+    let cursor = document.querySelector('.cursor');
+    
+
+    sectionThree.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            background: '#0f0f0f',
+        })
+    })
+ }
+ section3();
+
+
+ function section4(){
+    let sectionFour = document.querySelector('.section4');
+    let cursor = document.querySelector('.cursor');
+    
+
+    sectionFour.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            background: '#0f0f0f',
+        });
+    });
+
+    gsap.to(sectionFour, {
+        background: '#0f0f0f',
+        color: 'white',
+
+        scrollTrigger: {
+            trigger: ".section4 .four .moving-text",
+            start: "bottom center",
+            end: "bottom center",
+            scrub: 2,
+        },
+    });
+
+    gsap.to(".services", {
+        color: 'white',
+
+        scrollTrigger: {
+            trigger: '.section4 .four .moving-text',
+            start: 'bottom center',
+            end: 'bottom center',
+            scrub: 2,
+        },
+    });
+
+    sectionFour.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            background: 'white',
+            scrollTrigger: {
+                trigger: '.section4 .four .moving-text',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.1,
+            },
+
+        });
+    });
+ }
+ section4();
