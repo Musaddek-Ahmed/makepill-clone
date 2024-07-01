@@ -202,3 +202,50 @@
     });
  } 
  section5();
+
+ function section7() {
+    let sectionSeven = document.querySelector('.section7');
+    let cursor = document.querySelector('.cursor');
+    let body = document.querySelector('body');
+
+    gsap.to(body, {
+        background: '#0f0f0f',
+        color: 'white',
+        scrollTrigger: {
+            trigger: '.section6 .right',
+            start: 'bottom 60%',
+            end: 'bottom 40%',
+            scrub: 1,
+        },
+    });
+
+    sectionSeven.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            background: 'white',
+            duration: 0.1,
+            scrollTrigger: {
+                trigger: '.section6 .right',
+                start: 'bottom 60%',
+                end: 'bottom 40%',
+                scrub: 1,
+            },
+
+        });
+    });
+
+    sectionSeven.addEventListener('mouseleave', () => {
+        gsap.to(cursor, {
+            background: '#0f0f0f',
+            duration: 0.1,
+            scrollTrigger: {
+                trigger: '.section6 .right',
+                start: 'bottom 60%',
+                end: 'bottom 40%',
+                scrub: 1,
+            },
+
+        });
+    });
+
+ }
+ section7();

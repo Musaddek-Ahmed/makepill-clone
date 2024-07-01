@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: "Lato", sans-serif;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -288,4 +287,154 @@
 
 .section5 .five .left h1{
     font-size: 2.5vw;
+}
+
+.section6 {
+    min-height: 50vh;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+.section6 .six .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section6 .six .move{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scrolling linear infinite 15s;
+}
+
+.section6 .six .move h1{
+    font-size: 3.7vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.section6 .six .move span{
+    color: red;
+}
+
+.section6 .six .move i{
+    margin: 0 30px;
+    font-size: 50px;
+    color: red;
+}
+@keyframes scrolling{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.section6 .six .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    white-space: nowrap;
+}
+.section6 .six .right .like{
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    animation: like linear infinite 15s;
+}
+.section6 .six .right .like .one{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.section6 .six .right .like .one h1{
+    font-size: 3.7vw;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.section6 .six .right .like .one i{
+    font-size: 50px;
+    margin: 0 50px;
+    color: red;
+}
+@keyframes like {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.section7 {
+    height: 100vh;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.section7 .seven h4{
+    margin-bottom: 5vw ;
+}
+
+.section7 .follow .box{
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+.section7 .follow .box .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .7s ease all;
+}
+.section7 .follow .box:hover .back{
+    background-color: #222222;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section7 .follow .box .back .insta{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: insta linear infinite 15s;
+    opacity: 0;
+    scale: .5;
+    transition: all ease .7s;
+}
+.section7 .follow .box:hover .back .insta{
+    opacity: 1;
+    scale: 1.1;
+}
+
+.section7 .follow .box .back .insta h3{
+    color: white;
+    margin: 0 5px;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.section7 .follow .box .back .insta h3 .star{
+    color: yellow;
+}
+.section7 .follow .box .back .insta h3 span{
+    color: #575454;
+}
+
+@keyframes insta{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
