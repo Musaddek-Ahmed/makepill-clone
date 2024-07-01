@@ -175,3 +175,30 @@
     });
  }
  section4();
+
+ function section5(){
+    let sectionFive = document.querySelector('.section5');
+    let cursor = document.querySelector('.cursor');
+
+    sectionFive.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            background: '#0f0f0f',
+            duration: 0.1,
+        });
+    });
+
+    gsap.from('.section5 .five .left h1, .section5 .five .left h5', {
+        y:100,
+        opacity: 0,
+        stagger: 1,
+        duration: 3,
+
+        scrollTrigger: {
+            trigger: '.section5 .five',
+            start: 'top 60%',
+            end: 'top 30%',
+            scrub: 1,
+        }
+    });
+ } 
+ section5();
